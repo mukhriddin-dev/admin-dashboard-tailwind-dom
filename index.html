@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css file -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <header
+      class="bg-white fixed top-0 z-50 w-full l-0 shadow-2xl shadow-indigo-100 py-4"
+    >
+      <nav class="container-fluid flex items-center justify-between">
+        <ul class="flex items-center gap-6">
+          <li>
+            <a href="#" class="flex items-center gap-3 text-2xl">
+              <img
+                src="https://e-jurnal-one.vercel.app/assets/img/logo.png"
+                alt="logo"
+                class="w-8"
+              />
+              <span class="hidden md:block">DASHBOARD SYSTEM</span>
+            </a>
+          </li>
+          <li>
+            <button class="toggle-menu">
+              <i class="bi bi-list text-4xl"></i>
+            </button>
+          </li>
+          <li>
+            <input
+              type="search"
+              class="hidden md:block px-3 py-2 border-2 w-[300px] outline-none focus:ring-2 ring-indigo-500 duration-150 rounded-sm"
+              placeholder="enter search text ..."
+            />
+          </li>
+        </ul>
+
+        <button class="flex items-center gap-x-3 dropdown relative">
+          <img
+            src="https://picsum.photos/id/187/32/32"
+            class="rounded-full"
+            alt="user"
+          />
+          <span>A.Sardor</span>
+
+          <ul
+            class="dropdown-menu rounded-sm hidden flex-col text-lg items-start absolute bg-white border top-[50px] w-[200px] right-[5px]"
+          >
+            <li class="hover:bg-indigo-100 border w-full">
+              <a href="#" class="p-3 flex gap-x-2 w-full hover:text-indigo-600"
+                ><i class="bi bi-person-fill"></i> <span>Profile</span></a
+              >
+            </li>
+            <li class="hover:bg-indigo-100 border w-full">
+              <a href="#" class="p-3 flex gap-x-2 w-full hover:text-indigo-600"
+                ><i class="bi bi-gear-fill"></i> <span>Settings</span></a
+              >
+            </li>
+            <li class="hover:bg-indigo-100 border w-full" onclick="logOut()">
+              <a
+                href="./pages/login.html"
+                class="p-3 flex gap-x-2 w-full hover:text-indigo-600"
+                ><i class="bi bi-box-arrow-right"></i> <span>Log out</span></a
+              >
+            </li>
+          </ul>
+        </button>
+      </nav>
+    </header>
+
+    <main class="pt-[60px] flex">
+      <aside
+        id="aside"
+        class="min-w-[360px] md:static absolute bg-white shadow-2xl min-h-screen"
+      >
+        <ul class="nav-menu p-3">
+          <!-- dynamic content -->
+        </ul>
+        <hr />
+
+        <ul class="p-3 accordion-parent">
+          <li
+            class="w-full accordion-card bg-white hover:border border border-transparent p-4 rounded-lg text-md cursor-pointer hover:bg-indigo-50 text-indigo-600 hover:text-black"
+          >
+            <a
+              href="#"
+              class="gap-x-[12px] relative accordion-btn items-center flex text-xl"
+            >
+              <i class="bi bi-box text-2xl"></i> <span>Extra 1</span>
+
+              <i class="bi bi-caret-down absolute right-1"></i>
+            </a>
+
+            <ul class="accordion-panel">
+              <li>list-item-1</li>
+              <li>list-item-2</li>
+              <li>list-item-3</li>
+              <li>list-item-4</li>
+              <li>list-item-5</li>
+              <li>list-item-6</li>
+            </ul>
+          </li>
+          <li
+            class="w-full accordion-card bg-white hover:border border border-transparent p-4 rounded-lg text-md cursor-pointer hover:bg-indigo-50 text-indigo-600 hover:text-black"
+          >
+            <a
+              href="#"
+              class="gap-x-[12px] relative accordion-btn items-center flex text-xl"
+            >
+              <i class="bi bi-box text-2xl"></i> <span>Extra 2</span>
+              <i class="bi bi-caret-down absolute right-1"></i>
+            </a>
+
+            <ul class="accordion-panel">
+              <li>list-item-1</li>
+              <li>list-item-2</li>
+              <li>list-item-3</li>
+              <li>list-item-4</li>
+              <li>list-item-5</li>
+              <li>list-item-6</li>
+            </ul>
+          </li>
+
+          <li
+            class="w-full accordion-card bg-white hover:border border border-transparent p-4 rounded-lg text-md cursor-pointer hover:bg-indigo-50 text-indigo-600 hover:text-black"
+          >
+            <a
+              href="#"
+              class="gap-x-[12px] relative accordion-btn items-center flex text-xl"
+            >
+              <i class="bi bi-box text-2xl"></i> <span>Extra 3</span>
+              <i class="bi bi-caret-down absolute right-1"></i>
+            </a>
+
+            <ul class="accordion-panel">
+              <li>list-item-1</li>
+              <li>list-item-2</li>
+              <li>list-item-3</li>
+              <li>list-item-4</li>
+              <li>list-item-5</li>
+              <li>list-item-6</li>
+            </ul>
+          </li>
+        </ul>
+        
+      </aside>
+
+      <section id="main" class="w-full p-5 pt-8">
+        <div
+          class="w-full border border-dashed border-indigo-600 p-5 rounded-2xl"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+            perferendis et saepe!
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./assets/js/utils.js"></script>
+  <script src="./assets/js/constants.js"></script>
+  <script src="./assets/js/main.js"></script>
+</html>

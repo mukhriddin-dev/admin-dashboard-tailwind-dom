@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LOGIN PAGE</title>
+  </head>
+  <body>
+    <main class="w-full min-h-screen grid place-content-center">
+      <div
+        class="login-wrapper border border-indigo-100 rounded-3xl p-5 min-w-[460px] max-w-[500px]"
+      >
+        <a
+          href="#"
+          class="flex mx-auto w-[300px] items-center gap-3 text-2xl mb-6"
+        >
+          <img
+            src="https://e-jurnal-one.vercel.app/assets/img/logo.png"
+            alt="logo"
+            class="w-8"
+          />
+          <span class="hidden md:block">DASHBOARD SYSTEM</span>
+        </a>
+
+        <form  id="login-form">
+          <label for="username">
+            <p class="mb-2">Enter username</p>
+            <input
+              type="text"
+              id="username"
+              class="px-3 duration-200 outline-none focus:ring-indigo-400 focus:ring-1 rounded-3xl py-3 border block mb-4 w-full"
+              placeholder="Enter username"
+            />
+          </label>
+          <label for="password">
+            <p class="mb-2">Enter password</p>
+            <input
+              type="password"
+              id="password"
+              class="px-3 outline-none duration-200 focus:ring-indigo-400 focus:ring-1 rounded-3xl py-3 border block mb-4 w-full"
+              placeholder="Enter password"
+            />
+          </label>
+
+          <button
+            type="submit"
+            class="px-3 text-lg hover:bg-indigo-500 mt-6 uppercase outline-none bg-indigo-700 duration-200 text-white focus:ring-indigo-200 focus:ring-4 rounded-3xl py-3 border block mb-4 w-full"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/login.js"></script>
+</html>
